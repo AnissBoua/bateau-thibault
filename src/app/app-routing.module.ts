@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./views/tabs/tabs.module').then( m => m.TabsPageModule)
   },
+  {
+    path: 'contact',
+    loadChildren: () => import('./views/contact/contact.module').then( m => m.ContactPageModule)
+  },
 ];
 
 @NgModule({

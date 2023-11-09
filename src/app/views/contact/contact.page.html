@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <img src="assets/imgs/contact.png" class="w-full h-60 object-cover object-top" alt="">
+  </div>
+  <div class="py-4 px-10">
+    <div class="flex items-start gap-4">
+      <img src="assets/imgs/pecheur.png" class="min-w-[5em] w-20 h-20 rounded-full object-cover object-top" alt="">
+      <div>
+        <h1 class="font-crimson text-2xl py-2">Nous contacter</h1>
+        <p class="font-open">
+          Vous souhaitez nous écrire... Que peut-on faire pour vous aider ?
+        </p>
+      </div>
+    </div>
+    <form>
+      <div class="flex gap-4">
+        <div class="w-1/2 mt-4">
+          <div>
+            <label for="nom" class="font-open font-600">Nom</label>
+            <input type="text" name="nom" id="nom" class="w-full bg-white border border-gray-300 rounded-md shadow p-2 mt-2">
+          </div>
+        </div>
+        <div class="w-1/2 mt-4">
+          <div>
+            <label for="prenom" class="font-open font-600">Prénom</label>
+            <input type="text" name="prenom" id="prenom" class="w-full bg-white border border-gray-300 rounded-md shadow p-2 mt-2">
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <div>
+          <label for="email" class="font-open font-600">Email</label>
+          <input type="email" name="email" id="email" class="w-full bg-white border border-gray-300 rounded-md shadow p-2 mt-2">
+        </div>
+      </div>
+      <div class="mt-4">
+        <div>
+          <label for="message" class="font-open font-600">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10" class="w-full bg-white border border-gray-300 rounded-md shadow p-2 mt-2"></textarea>
+        </div>
+      </div>
+      <div class="mt-4">
+        <button class="bg-teal-400 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded">
+          Envoyer
+        </button>
+      </div>
+    </form>
+  </div>
+</ion-content>

@@ -10,13 +10,18 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./views/tabs/tabs.module').then( m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'poissons',
     loadChildren: () => import('./views/poissons/poissons.module').then( m => m.PoissonsPageModule)
   },
 
 
 
+  {
+    path: 'contact',
+    loadChildren: () => import('./views/contact/contact.module').then( m => m.ContactPageModule)
+  },
 ];
 
 @NgModule({

@@ -15,13 +15,15 @@ const routes: Routes = [
     path: 'poissons',
     loadChildren: () => import('./views/poissons/poissons.module').then( m => m.PoissonsPageModule)
   },
-
-
-
   {
     path: 'contact',
     loadChildren: () => import('./views/contact/contact.module').then( m => m.ContactPageModule)
   },
+  {
+    path: 'single-poisson',
+    loadChildren: () => import('./views/single-poisson/single-poisson.module').then( m => m.SinglePoissonPageModule)
+  },
+
 ];
 
 @NgModule({

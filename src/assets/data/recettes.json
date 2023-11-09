@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nom": "Poulet rôti aux herbes",
+    "img": "1.png",
+    "description": "Un délicieux poulet rôti, assaisonné avec un mélange d'herbes fraîches et cuit à la perfection. Un plat classique et réconfortant pour toute la famille."
+  },
+  {
+    "id": 2,
+    "nom": "Pâtes carbonara crémeuses",
+    "img": "2.png",
+    "description": "Des pâtes al dente mélangées à une sauce onctueuse à base d'œufs, de fromage et de pancetta croustillante. Un plat italien emblématique et délicieux."
+  },
+  {
+    "id": 3,
+    "nom": "Salade méditerranéenne",
+    "img": "3.png",
+    "description": "Une salade fraîche et colorée composée de tomates juteuses, de concombres croquants, d'olives savoureuses et de fromage féta crémeux. Une explosion de saveurs méditerranéennes."
+  },
+  {
+    "id": 4,
+    "nom": "Sushi Rolls variés",
+    "img": "4.png",
+    "description": "Des rouleaux de sushi artisanaux remplis de poissons frais, de légumes croquants et de riz vinaigré, accompagnés de sauce soja et de wasabi. Une expérience japonaise authentique."
+  },
+  {
+    "id": 5,
+    "nom": "Curry de poulet épicé",
+    "img": "5.png",
+    "description": "Un curry parfumé et épicé, préparé avec du poulet tendre, des légumes savoureux et une sauce crémeuse à base de lait de coco. Un plat qui réveille les papilles."
+  },
+  {
+    "id": 6,
+    "nom": "Pizza Margherita classique",
+    "img": "6.png",
+    "description": "Une pizza italienne traditionnelle garnie de tomates mûres, de mozzarella fondante, de basilic frais et d'une pincée de sel. Un classique qui plait à tous les palais."
+  },
+  {
+    "id": 7,
+    "nom": "Gâteau au chocolat fondant",
+    "img": "7.png",
+    "description": "Un gâteau au chocolat moelleux et fondant, préparé avec du cacao de qualité supérieure et garni d'un glaçage velouté. Un dessert irrésistible pour les amateurs de chocolat."
+  },
+  {
+    "id": 8,
+    "nom": "Risotto crémeux aux champignons",
+    "img": "8.jpg",
+    "description": "Un risotto crémeux et parfumé, préparé avec des champignons sautés, du riz Arborio et une touche de vin blanc. Un plat italien réconfortant et délicieux."
+  },
+  {
+    "id": 9,
+    "nom": "Tacos au poisson croustillant",
+    "img": "9.jpg",
+    "description": "Des tacos garnis de poisson blanc croustillant, de salsa fraîche, de laitue croquante et d'une touche de crème d'avocat. Une explosion de saveurs pour un repas léger et savoureux."
+  },
+  {
+    "id": 10,
+    "nom": "Salade de quinoa aux légumes grillés",
+    "img": "10.png",
+    "description": "Une salade nutritive composée de quinoa, de légumes colorés grillés, de pois chiches croquants et d'une vinaigrette citronnée. Un repas sain et délicieux."
+  }
+]

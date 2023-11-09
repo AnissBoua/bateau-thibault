@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nom": "Le Baratie",
+    "img": "1.png",
+    "description": "Savourez une cuisine raffinée dans un cadre élégant. La Belle Étoile propose une expérience culinaire inoubliable, mettant en avant des plats créatifs et des vins exquis."
+  },
+  {
+    "id": 2,
+    "nom": "Le Fouquet",
+    "img": "2.png",
+    "description": "Plongez dans un paradis gastronomique où les saveurs rencontrent l'art. Le Jardin Secret vous invite à découvrir une cuisine unique et une ambiance enchanteresse."
+  },
+  {
+    "id": 3,
+    "nom": "Flunch",
+    "img": "3.jpg",
+    "description": "Dégustez des mets délicieux avec une vue imprenable sur le port. L'Auberge du Port offre une expérience culinaire chaleureuse et conviviale dans un cadre pittoresque."
+  },
+  {
+    "id": 4,
+    "nom": "Le O'Tacos",
+    "img": "4.png",
+    "description": "Plongez dans l'élégance et le raffinement au Château de Saveurs. Découvrez une cuisine exquise accompagnée d'une sélection de vins soigneusement choisis."
+  },
+  {
+    "id": 5,
+    "nom": "Le Five",
+    "img": "5.png",
+    "description": "Un lieu où la tradition et la créativité se rencontrent. La Taverne Gourmande vous propose des plats authentiques et des innovations culinaires surprenantes."
+  },
+  {
+    "id": 6,
+    "nom": "Le Buffalo grill",
+    "img": "6.png",
+    "description": "Profitez d'une cuisine ensoleillée dans un cadre charmant. Le Patio Fleuri vous invite à déguster des plats frais et savoureux dans une atmosphère détendue."
+  },
+  {
+    "id": 7,
+    "nom": "Le Domino's",
+    "img": "7.png",
+    "description": "Un refuge pour les amateurs de bonne cuisine. L'Oasis Épicurienne vous propose une expérience gastronomique mémorable, mettant en avant des produits locaux et de saison."
+  },
+  {
+    "id": 8,
+    "nom": "Le Pedra Alta",
+    "img": "8.jpg",
+    "description": "Retrouvez l'ambiance authentique des bistrots parisiens. Le Bistrot Parisien vous offre une cuisine française classique et des vins sélectionnés avec soin."
+  },
+  {
+    "id": 9,
+    "nom": "Le Italian Trattoria",
+    "img": "9.png",
+    "description": "Voyagez en Italie sans quitter votre siège. La Trattoria Bella vous propose une cuisine italienne authentique dans un cadre chaleureux et convivial."
+  },
+  {
+    "id": 10,
+    "nom": "Le Ichiraku Ramen",
+    "img": "10.png",
+    "description": "Embarquez pour un voyage culinaire à travers le monde. Le Gourmet Voyageur vous invite à découvrir une cuisine internationale diversifiée et pleine de saveurs."
+  }
+]

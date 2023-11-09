@@ -1,0 +1,17 @@
+<div class="w-full flex justify-center my-4">
+  <div
+    (click)="goToItem(item)"
+    class="bg-white w-11/12 py-4 px-8 rounded-md flex items-center justify-between shadow-md gap-1"
+  >
+    <img
+      *ngIf="img !== ''; else noImg"
+      [src]="img"
+      class="w-12 h-12 rounded-full"
+    />
+
+    <ng-template #noImg>
+      <div></div>
+    </ng-template>
+    <p class="w-9/12">{{ text }}</p>
+  </div>
+</div>

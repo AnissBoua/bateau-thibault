@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => import('./views/contact/contact.module').then( m => m.ContactPageModule)
   },
+  {
+    path: 'panier',
+    loadChildren: () => import('./views/panier/panier.module').then( m => m.PanierPageModule)
+  },
 ];
 
 @NgModule({

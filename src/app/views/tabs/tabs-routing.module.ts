@@ -18,7 +18,6 @@ const routes: Routes = [
           },
         ],
       },
-
       {
         path: 'list',
         children: [
@@ -26,6 +25,18 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../list/list.module').then((m) => m.ListPageModule),
+          },
+        ],
+      },
+      {
+        path: 'contact',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../contact/contact.module').then(
+                (m) => m.ContactPageModule
+              ),
           },
         ],
       },

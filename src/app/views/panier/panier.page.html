@@ -1,0 +1,60 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="bg-teal-100 px-4 py-8">
+    <h1 class="font-crimson font-medium text-4xl">Panier</h1>
+    <div class="flex flex-col gap-4 my-8">
+      <div *ngFor="let item of products;">
+        <div class="flex gap-4 bg-white rounded-md py-6 px-4">
+          <img *ngIf="item.product" [src]="item.product" class="w-40 h-40 object-cover object-top" alt="">
+          <div class="flex flex-col justify-between w-full">
+            <div>
+              <div class="flex items-start justify-between">
+                <div>
+                  <h2 class="font-open font-semibold text-lg">{{ item.product.name }}</h2>
+                  <p class="font-open text-gray-500">{{ item.product.category }}</p>
+                </div>
+                <button (click)="remove(item)">
+                  <img src="assets/icon/close-x.svg" alt="" class="w-4 h-4">
+                </button>
+              </div>
+              <div>
+                <span class="font-crimson font-semibold">{{ (item.product.price * item.quantity).toFixed(2) }} €</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <button class="bg-teal-100 hover:bg-teal-200 text-teal-800 font-bold py-1 px-3 rounded" (click)="minus(item)">
+                -
+              </button>
+              <span class="font-crimson font-medium text-xl">{{ item.quantity }}</span>
+              <button class="bg-teal-100 hover:bg-teal-200 text-teal-800 font-bold py-1 px-3 rounded" (click)="plus(item)">
+                +
+              </button>
+            </div>
+            <div class="flex items-center gap-4">
+              <div *ngIf="item.product.availability" class="flex items-center gap-1">
+                <img src="assets/icon/checks-v.svg" alt="" class="w-4 h-4">
+                <span class="font-open text-sm">Disponible</span>
+              </div>
+              <div *ngIf="!item.product.availability" class="flex items-center gap-1">
+                <img src="assets/icon/circle-block.svg" alt="" class="w-4 h-4">
+                <span class="font-open text-sm">Indisponible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="py-8">
+        <div class="bg-white rounded-md px-4 py-2">
+          <div class="flex justify-between ">
+            <span class="font-crimson font-semibold text-lg">Total</span>
+            <span class="font-crimson font-semibold text-xl">{{ total().toFixed(2) }} €</span>
+          </div>
+          <div class="flex justify-center w-full">
+            <button class="w-full bg-teal-200 hover:bg-teal-500 text-teal-800 font-open font-bold rounded-md py-2 mt-4">Payer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

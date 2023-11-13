@@ -5,11 +5,20 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'tabs/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'tabs',
-    loadChildren: () => import('./views/tabs/tabs.module').then( m => m.TabsPageModule)
+    loadChildren: () =>
+      import('./views/tabs/tabs.module').then((m) => m.TabsPageModule),
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./views/contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'panier',
+    loadChildren: () => import('./views/panier/panier.module').then( m => m.PanierPageModule)
   },
   {
     path: 'item',
@@ -23,8 +32,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

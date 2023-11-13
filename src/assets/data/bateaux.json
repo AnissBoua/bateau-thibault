@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nom": "Vogue Merry",
+    "img": "1.png",
+    "description": "Le Vogue Merry est un voilier de luxe conçu pour les voyageurs avides d'aventure en mer. Son design élégant et ses équipements modernes offrent une expérience de navigation exceptionnelle."
+  },
+  {
+    "id": 2,
+    "nom": "Black Pearl",
+    "img": "2.png",
+    "description": "Le Black Pearl est un catamaran spacieux et confortable qui vous emmène dans un voyage à travers les plus belles étendues d'océan. Profitez de moments inoubliables à bord."
+  },
+  {
+    "id": 3,
+    "nom": "Thousand Sunny",
+    "img": "3.png",
+    "description": "Le Thousand Sunny est un yacht de luxe qui incarne l'élégance et le raffinement. Découvrez le confort ultime et l'attention au détail à bord de ce bateau d'exception."
+  },
+  {
+    "id": 4,
+    "nom": "Red Force",
+    "img": "4.png",
+    "description": "Le Red Force est un voilier classique qui allie charme intemporel et performances remarquables en mer. Parfait pour ceux qui apprécient l'authenticité de la voile."
+  },
+  {
+    "id": 5,
+    "nom": "Oro Jackson",
+    "img": "5.png",
+    "description": "L'Oro Jackson est un catamaran innovant conçu pour les explorateurs des mers. Avec ses fonctionnalités avancées, il vous emmène vers des destinations marines spectaculaires."
+  },
+  {
+    "id": 6,
+    "nom": "Titanic",
+    "img": "6.png",
+    "description": "Le Titanic est un yacht de croisière de luxe qui offre une expérience de voyage inégalée. Profitez du confort somptueux et des paysages à couper le souffle à bord de ce navire d'exception."
+  },
+  {
+    "id": 7,
+    "nom": "Hollandais Volant",
+    "img": "7.jpg",
+    "description": "Hollandais Volant est une goélette traditionnelle qui vous transporte dans l'ambiance envoûtante de la voile classique. Embarquez pour une aventure intemporelle à bord de ce magnifique bateau."
+  },
+  {
+    "id": 8,
+    "nom": "Moby Dick",
+    "img": "8.webp",
+    "description": "Le Moby Dick est un voilier moderne conçu pour les explorateurs intrépides. Avec son design futuriste et ses technologies avancées, il offre une expérience de navigation à la pointe de l'innovation."
+  },
+  {
+    "id": 9,
+    "nom": "Sapphire Serenity",
+    "img": "9.jpg",
+    "description": "Le Sapphire Serenity est un catamaran de luxe qui vous emmène dans un monde de tranquillité et de détente. Profitez de l'espace et du confort offerts par ce bateau d'exception."
+  },
+  {
+    "id": 10,
+    "nom": "RLS Legacy",
+    "img": "10.png",
+    "description": "Le RLS Legacy est un yacht élégant et sophistiqué qui vous invite à vivre une expérience de voyage inoubliable. Découvrez le luxe absolu à bord de ce navire exclusif."
+  }
+]

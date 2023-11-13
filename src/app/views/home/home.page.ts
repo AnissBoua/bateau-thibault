@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  constructor(private router: Router) {}
 
-  constructor() {}
-
+  goToList(target: string) {
+    let navigationExtras: NavigationExtras = {
+      state: {
+        list: target,
+      },
+    };
+    this.router.navigate(['/tabs/list'], navigationExtras);
+  }
 }

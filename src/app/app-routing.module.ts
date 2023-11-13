@@ -20,6 +20,14 @@ const routes: Routes = [
     path: 'panier',
     loadChildren: () => import('./views/panier/panier.module').then( m => m.PanierPageModule)
   },
+  {
+    path: 'item',
+    loadChildren: () => import('./item/item.module').then( m => m.ItemPageModule)
+  },
+  {
+    path: 'item-detail',
+    loadChildren: () => import('./item-detail/item-detail.module').then( m => m.ItemDetailPageModule)
+  },
 ];
 
 @NgModule({

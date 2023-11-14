@@ -18,7 +18,6 @@ const routes: Routes = [
           },
         ],
       },
-
       {
         path: 'list',
         children: [
@@ -26,6 +25,30 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../list/list.module').then((m) => m.ListPageModule),
+          },
+        ],
+      },
+      {
+        path: 'contact',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../contact/contact.module').then(
+                (m) => m.ContactPageModule
+              ),
+          },
+        ],
+      },
+      {
+        path: 'item-detail',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../item-detail/item-detail.module').then(
+                (m) => m.ItemDetailPageModule
+              ),
           },
         ],
       },

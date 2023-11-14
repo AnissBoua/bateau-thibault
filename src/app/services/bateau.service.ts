@@ -9,14 +9,16 @@ export class BateauService {
   bateaux: Bateau[] = [];
 
   constructor(private http: HttpClient) {
-    this.fetchBateaux().subscribe(
-      (bateaux) => {
-        this.bateaux = bateaux;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    this.initialize();
+  }
+
+  async initialize() {
+    try {
+      const response = await fetch('assets/data/bateaux.json');
+      this.bateaux = (await response.json()) as Bateau[];
+    } catch (error) {
+      console.warn(error);
+    }
   }
 
   fetchBateaux() {

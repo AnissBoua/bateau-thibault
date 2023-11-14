@@ -7,16 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { ItemDetailPageRoutingModule } from './item-detail-routing.module';
 
 import { ItemDetailPage } from './item-detail.page';
-import { SharedModule } from "../modules/shared/shared.module";
+import { SharedModule } from '../../modules/shared/shared.module';
 
 @NgModule({
-    declarations: [ItemDetailPage],
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        ItemDetailPageRoutingModule,
-        SharedModule
-    ]
+  declarations: [ItemDetailPage],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    ItemDetailPageRoutingModule,
+    SharedModule,
+  ],
 })
 export class ItemDetailPageModule {}

@@ -11,15 +11,16 @@ export class ListItemComponent implements OnInit {
   @Input() text: string = '';
   @Input() img: string = '';
   @Input() page: string = '';
+  @Input() category: string = '';
 
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
   goToItem(target: number) {
-    console.log('/tabs/' + this.page, target);
     let navigationExtras: NavigationExtras = {
       state: {
+        category: this.category,
         item: target,
       },
     };

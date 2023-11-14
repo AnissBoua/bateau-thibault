@@ -1,0 +1,14 @@
+<app-header></app-header>
+<ion-content>
+  <div class="background">
+    <div>
+      <div class="content">
+        <h2 class="title my-4">{{ item.name }}</h2>
+        <img [src]="categoryPath + item.image" class="center-image" />
+        <p class="description">Nom : {{ item.name }}</p>
+      </div>
+
+      <p class="m-4 text-justify">{{item.description}}</p>
+    </div>
+  </div>
+</ion-content>

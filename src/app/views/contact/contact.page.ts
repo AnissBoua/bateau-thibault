@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,11 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.page.scss'],
 })
 export class ContactPage implements OnInit {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private toastService: ToastService) {}
 
   ngOnInit() {
-    this.http.get('https://127.0.0.1:8000/novel/serch').subscribe((res) => {
-      console.log(res);
-    });
+    this.http.get('https://127.0.0.1:8000/novel/serch').subscribe((res) => {});
   }
 }

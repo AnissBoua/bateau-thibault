@@ -9,14 +9,16 @@ export class RecetteService {
   recettes: Recette[] = [];
 
   constructor(private http: HttpClient) {
-    this.fetchRecettes().subscribe(
-      (recettes) => {
-        this.recettes = recettes;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    this.initialize();
+  }
+
+  async initialize() {
+    try {
+      const response = await fetch('assets/data/recettes.json');
+      this.recettes = (await response.json()) as Recette[];
+    } catch (error) {
+      console.warn(error);
+    }
   }
 
   fetchRecettes() {

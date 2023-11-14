@@ -40,6 +40,18 @@ const routes: Routes = [
           },
         ],
       },
+      {
+        path: 'item-detail',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../item-detail/item-detail.module').then(
+                (m) => m.ItemDetailPageModule
+              ),
+          },
+        ],
+      },
     ],
   },
 ];

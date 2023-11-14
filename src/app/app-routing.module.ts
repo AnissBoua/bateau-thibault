@@ -14,19 +14,20 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    loadChildren: () => import('./views/contact/contact.module').then( m => m.ContactPageModule)
+    loadChildren: () =>
+      import('./views/contact/contact.module').then((m) => m.ContactPageModule),
   },
   {
     path: 'panier',
-    loadChildren: () => import('./views/panier/panier.module').then( m => m.PanierPageModule)
-  },
-  {
-    path: 'item',
-    loadChildren: () => import('./item/item.module').then( m => m.ItemPageModule)
+    loadChildren: () =>
+      import('./views/panier/panier.module').then((m) => m.PanierPageModule),
   },
   {
     path: 'item-detail',
-    loadChildren: () => import('./item-detail/item-detail.module').then( m => m.ItemDetailPageModule)
+    loadChildren: () =>
+      import('./views/item-detail/item-detail.module').then(
+        (m) => m.ItemDetailPageModule
+      ),
   },
 ];
 

@@ -14,6 +14,8 @@
         [text]="bateau.nom"
         [item]="bateau.id"
         [img]="'assets/imgs/bateaux/'+bateau.img"
+        page="item-detail"
+        category="bateau"
       ></app-list-item>
     </div>
     <div *ngIf="page === 'Recettes';" class="w-full">
@@ -22,6 +24,8 @@
         [text]="recette.nom"
         [item]="recette.id"
         [img]="'assets/imgs/recettes/'+recette.img"
+        page="item-detail"
+        category="recette"
       ></app-list-item>
     </div>
     <div *ngIf="page === 'Restaurants';" class="w-full">
@@ -30,6 +34,8 @@
         [text]="restaurant.nom"
         [item]="restaurant.id"
         [img]="'assets/imgs/restaurants/'+restaurant.img"
+        page="item-detail"
+        category="restaurant"
       ></app-list-item>
     </div>
   </div>

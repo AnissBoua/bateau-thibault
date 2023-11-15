@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-poissons',
@@ -7,30 +9,41 @@ import { NavigationExtras, Router } from '@angular/router';
   styleUrls: ['./poissons.page.scss'],
 })
 export class PoissonsPage implements OnInit {
-  poissonsCategorie =[
-    {
-      name :"Poissons"
-    },
-    {
-      name :"Coquillages"
-    },
-    {
-      name :"Crustacés"
-    },
+ categories: any[] =[
+  {
+    id: 0,
+    name: "Poissons"
+  },
+  {
+    id: 1,
+    name: "Coquillages"
+  },
+  {
+    id: 2,
+    name: "Crustacés"
+  },
+  {
+    id: 3,
+    name: "Promotions"
+  },
+ ]
 
-    {
-      name :"Promotions"
-    },
-  ]
-  constructor(private router: Router) { }
+// dico : any ={
+//   0 : "Poissons",
+//   1 : "Coquillage",
+//   2 : "Crustacés",
+//   3 : "Promotions"
+// }
+  constructor(private router: Router, private productService: ProductService) { }
 
   ngOnInit() {
   }
-  onLoadPoisson(name :string) {
+  onLoadPoisson(categories :{id: number, name : string}) {
     let navigationExtras: NavigationExtras = {
       state: {
-        poissonsName : name
+        categories : categories
       }
     };
+    this.router.navigate(['/single-categorie'],navigationExtras);
   }
 }

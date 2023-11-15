@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <ng-container class="bg-[#F3FFFF]">
+
+  <ion-content [fullscreen]="true">
+
+    <div >
+      <h1 class="ion-text-center padding italic py-2">{{ category[categoryId] }}</h1>
+      <app-list-item
+      *ngFor="let produit of produits"
+      [text]="produit.name"
+
+      [img]="'assets/icon/poulpe.png'"
+    ></app-list-item>
+
+    </div>
+
+  </ion-content>
+
+  </ng-container>

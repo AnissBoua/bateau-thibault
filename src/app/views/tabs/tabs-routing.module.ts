@@ -29,6 +29,16 @@ const routes: Routes = [
           },
         ],
       },
+      {
+        path: 'single-categorie',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../single-categorie/single-categorie.module').then((m) => m.SingleCategoriePageModule),
+          },
+        ],
+      },
     ],
   },
 ];

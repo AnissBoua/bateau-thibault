@@ -6,13 +6,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ProductService {
-  products: Product[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   getProducts() {
-    return this.http.get<Product[]>(
-      'http://51.255.166.155:1352/tig/products/?format=json'
-    );
+
   }
 }

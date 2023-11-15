@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: 'single-poisson',
     loadChildren: () => import('./views/single-poisson/single-poisson.module').then( m => m.SinglePoissonPageModule)
+  },  {
+    path: 'single-categorie',
+    loadChildren: () => import('./views/single-categorie/single-categorie.module').then( m => m.SingleCategoriePageModule)
   },
+
 
 ];
 

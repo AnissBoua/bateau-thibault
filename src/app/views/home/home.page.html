@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <div class="text-black text-center py-10 font-open bg-[#F3FFFF]">
+  <div class="text-black text-center py-10 font-open bg-[#F3FFFF] h-full">
     <div>
       <div class="font-crimson text-4xl">
         <h1>Accueil</h1>
@@ -59,7 +59,10 @@
             <p class="font-crimson text-xl font-bold">Recettes</p>
           </div>
         </div>
-        <div class="bg-blue-200 text-black w-1/2 rounded-md py-4">
+        <div
+          [routerLink]="['/tabs/contact']"
+          class="bg-blue-200 text-black w-1/2 rounded-md py-4"
+        >
           <ion-img
             src="assets/imgs/home/contact.png"
             class="w-14 mx-auto"

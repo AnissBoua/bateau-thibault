@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -13,21 +14,30 @@ const routes: Routes = [
       import('./views/tabs/tabs.module').then((m) => m.TabsPageModule),
   },
   {
-    path: 'poissons',
-    loadChildren: () => import('./views/poissons/poissons.module').then( m => m.PoissonsPageModule)
+    path: 'contact',
+    loadChildren: () =>
+      import('./views/contact/contact.module').then((m) => m.ContactPageModule),
   },
   {
-    path: 'contact',
-    loadChildren: () => import('./views/contact/contact.module').then( m => m.ContactPageModule)
+    path: 'panier',
+    loadChildren: () =>
+      import('./views/panier/panier.module').then((m) => m.PanierPageModule),
+  },
+  {
+    path: 'item-detail',
+    loadChildren: () =>
+      import('./views/item-detail/item-detail.module').then(
+        (m) => m.ItemDetailPageModule
+      ),
   },
   {
     path: 'single-poisson',
     loadChildren: () => import('./views/single-poisson/single-poisson.module').then( m => m.SinglePoissonPageModule)
-  },  {
+  },
+  {
     path: 'single-categorie',
     loadChildren: () => import('./views/single-categorie/single-categorie.module').then( m => m.SingleCategoriePageModule)
   },
-
 
 ];
 

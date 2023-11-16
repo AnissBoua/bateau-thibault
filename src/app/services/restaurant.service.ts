@@ -9,14 +9,16 @@ export class RestaurantService {
   restaurants: Restaurant[] = [];
 
   constructor(private http: HttpClient) {
-    this.fetchRestaurants().subscribe(
-      (restaurants) => {
-        this.restaurants = restaurants;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    this.initialize();
+  }
+
+  async initialize() {
+    try {
+      const response = await fetch('assets/data/restaurants.json');
+      this.restaurants = (await response.json()) as Restaurant[];
+    } catch (error) {
+      console.warn(error);
+    }
   }
 
   fetchRestaurants() {

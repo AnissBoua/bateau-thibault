@@ -17,4 +17,12 @@ export class HomePage {
     };
     this.router.navigate(['/tabs/list'], navigationExtras);
   }
+  goToPromotion(promotions: string){
+    let navigationExtras : NavigationExtras ={
+      state: {
+        poissons : promotions,
+      },
+    };
+    this.router.navigate(['/tabs/poisson'], navigationExtras)
+  }
 }

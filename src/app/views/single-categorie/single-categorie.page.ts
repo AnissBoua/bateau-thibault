@@ -38,4 +38,13 @@ export class SingleCategoriePage implements OnInit {
       err => console.warn(err)
     );
   }
+
+  onLoadPoisson(produit : Product) {
+    let navigationExtras: NavigationExtras = {
+      state: {
+        produit : produit
+      }
+    };
+    this.router.navigate(['tabs/single-poisson'], navigationExtras);
+  }
 }

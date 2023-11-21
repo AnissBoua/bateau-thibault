@@ -65,6 +65,18 @@ const routes: Routes = [
         ],
       },
       {
+        path: 'single-poisson',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../single-poisson/single-poisson.module').then(
+                (m) => m.SinglePoissonPageModule
+              ),
+          },
+        ],
+      },
+      {
         path: 'item-detail',
         children: [
           {

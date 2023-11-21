@@ -11,8 +11,8 @@
       <app-list-item
       *ngFor="let produit of produits"
       [text]="produit.name"
-
       [img]="'assets/icon/poulpe.png'"
+      (click)="onLoadPoisson(produit)"
     ></app-list-item>
 
     </div>

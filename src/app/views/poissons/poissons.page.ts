@@ -38,12 +38,13 @@ export class PoissonsPage implements OnInit {
 
   ngOnInit() {
   }
-  onLoadPoisson(categories :{id: number, name : string}) {
+
+  onLoadPoisson(categorie :{id: number, name : string}) {
     let navigationExtras: NavigationExtras = {
       state: {
-        categories : categories
+        categorie : categorie
       }
     };
-    this.router.navigate(['/single-categorie'],navigationExtras);
+    this.router.navigate(['tabs/single-categorie'],navigationExtras);
   }
 }

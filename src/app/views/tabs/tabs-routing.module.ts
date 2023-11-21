@@ -29,16 +29,6 @@ const routes: Routes = [
         ],
       },
       {
-        path: 'single-categorie',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../single-categorie/single-categorie.module').then((m) => m.SingleCategoriePageModule),
-          },
-        ],
-      },
-      {
         path: 'contact',
         children: [
           {
@@ -46,6 +36,30 @@ const routes: Routes = [
             loadChildren: () =>
               import('../contact/contact.module').then(
                 (m) => m.ContactPageModule
+              ),
+          },
+        ],
+      },
+      {
+        path: 'poisson',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../poissons/poissons.module').then(
+                (m) => m.PoissonsPageModule
+              ),
+          },
+        ],
+      },
+      {
+        path: 'single-categorie',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../single-categorie/single-categorie.module').then(
+                (m) => m.SingleCategoriePageModule
               ),
           },
         ],

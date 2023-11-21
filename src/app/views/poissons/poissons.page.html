@@ -8,8 +8,8 @@
     *ngFor="let categorie of categories"
     [text]="categorie.name"
     [item]="categorie.id"
-    [page]="'single-categorie'"
     [img]="'assets/icon/poulpe.png'"
+    (click)="onLoadPoisson(categorie)"
   ></app-list-item>
 
   </div>

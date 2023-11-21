@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PoissonsPage } from './poissons.page';
+import { ProductService } from 'src/app/services/product.service';
 
 describe('PoissonsPage', () => {
   let component: PoissonsPage;

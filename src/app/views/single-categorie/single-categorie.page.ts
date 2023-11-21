@@ -29,10 +29,10 @@ export class SingleCategoriePage implements OnInit {
    }
 
   ngOnInit() {
+    this.categoryId = this.router.getCurrentNavigation()?.extras.state?.['categorie'].id;
     this.http.get<Product[]>('assets/data/products.json').subscribe(
       res => {
         this.produits = res
-        this.categoryId = this.router.getCurrentNavigation()?.extras.state?.['item'] | this.categoryId;
         this.produits = this.produits.filter((product)=> product.category === this.categoryId);
       },
       err => console.warn(err)

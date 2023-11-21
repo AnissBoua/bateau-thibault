@@ -14,6 +14,7 @@ import { ErrorInterceptor } from './ErrorInterceptor';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    IonicModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,

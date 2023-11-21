@@ -1,0 +1,31 @@
+.background {
+  height: 100vh;
+  background: linear-gradient(to bottom, #3DD2CC 50%, #F3FFFF 50%);
+  display: flex;
+  justify-content: center; /* Horizontalement centré */
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+.center-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.title {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.description {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}

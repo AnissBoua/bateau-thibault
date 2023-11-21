@@ -3,6 +3,7 @@ export interface Item {
   name: string;
   image: string;
   description: string;
+  prix: number | null;
 }
 // export class Item {
 //     id: number;

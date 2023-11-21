@@ -41,6 +41,42 @@ const routes: Routes = [
         ],
       },
       {
+        path: 'poisson',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../poissons/poissons.module').then(
+                (m) => m.PoissonsPageModule
+              ),
+          },
+        ],
+      },
+      {
+        path: 'single-categorie',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../single-categorie/single-categorie.module').then(
+                (m) => m.SingleCategoriePageModule
+              ),
+          },
+        ],
+      },
+      {
+        path: 'single-poisson',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../single-poisson/single-poisson.module').then(
+                (m) => m.SinglePoissonPageModule
+              ),
+          },
+        ],
+      },
+      {
         path: 'item-detail',
         children: [
           {

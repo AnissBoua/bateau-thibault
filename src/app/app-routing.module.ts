@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -29,6 +30,15 @@ const routes: Routes = [
         (m) => m.ItemDetailPageModule
       ),
   },
+  {
+    path: 'single-poisson',
+    loadChildren: () => import('./views/single-poisson/single-poisson.module').then( m => m.SinglePoissonPageModule)
+  },
+  {
+    path: 'single-categorie',
+    loadChildren: () => import('./views/single-categorie/single-categorie.module').then( m => m.SingleCategoriePageModule)
+  },
+
 ];
 
 @NgModule({

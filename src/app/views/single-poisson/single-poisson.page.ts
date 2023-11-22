@@ -5,6 +5,7 @@ import { Item } from 'src/app/models/item';
 import { Product } from 'src/app/models/product';
 import { StorageService } from 'src/app/services/storage.service';
 import { CartItem } from 'src/app/models/cartItem';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -17,12 +18,27 @@ export class SinglePoissonPage implements OnInit {
   categoryPath: string = '';
   constructor(private route: ActivatedRoute,
     private router: Router, private productService : ProductService,
-    private storage: StorageService) {
+    private storage: StorageService,
+    private http: HttpClient) {
     this.item = {} as Product;
    }
 
   ngOnInit() {
-    this.item = this.router.getCurrentNavigation()?.extras.state?.['produit'];
+    this.route.queryParams.subscribe((params) => {
+      if (this.router.getCurrentNavigation()?.extras.state) {
+        const itemId = this.router.getCurrentNavigation()?.extras.state?.['item'];
+        this.http.get<Product[]>('assets/data/products.json').subscribe(
+          res => {
+            res.forEach((product) => {
+              if (product.id === itemId) {
+                this.item = product;
+              }
+            });
+          },
+          err => console.warn(err)
+        );
+      }
+    });
   }
 
   async getProduct(id: number) {
@@ -49,7 +65,8 @@ export class SinglePoissonPage implements OnInit {
       } else {
         this.storage.set('products', [cartItem]);
       }
-      this.router.navigate(['/panier']);
+
+      this.router.navigate(['tabs/panier']);
     })
   }
 }

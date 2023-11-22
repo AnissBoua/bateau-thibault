@@ -19,11 +19,6 @@ const routes: Routes = [
       import('./views/contact/contact.module').then((m) => m.ContactPageModule),
   },
   {
-    path: 'panier',
-    loadChildren: () =>
-      import('./views/panier/panier.module').then((m) => m.PanierPageModule),
-  },
-  {
     path: 'item-detail',
     loadChildren: () =>
       import('./views/item-detail/item-detail.module').then(

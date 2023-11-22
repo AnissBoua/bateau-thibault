@@ -45,6 +45,6 @@ export class PoissonsPage implements OnInit {
         categorie : categorie
       }
     };
-    this.router.navigate(['tabs/single-categorie'],navigationExtras);
+    this.router.navigate(['/tabs/single-categorie'],navigationExtras);
   }
 }

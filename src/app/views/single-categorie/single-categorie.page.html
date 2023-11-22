@@ -1,22 +1,15 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true">
-
-  <ng-container class="bg-[#F3FFFF]">
-
-  <ion-content [fullscreen]="true">
-
-    <div >
-      <h1 class="ion-text-center padding italic py-2">{{ category[categoryId] }}</h1>
+    <div class="h-full bg-[#F3FFFF] py-4">
+      <h1 class="text-center font-crimson text-3xl py-2">{{ category[categoryId] }}</h1>
       <app-list-item
       *ngFor="let produit of produits"
       [text]="produit.name"
+      [item]="produit.id"
       [img]="'assets/icon/poulpe.png'"
-      (click)="onLoadPoisson(produit)"
+      page="single-poisson"
     ></app-list-item>
-
     </div>
 
-  </ion-content>
-
-  </ng-container>
+</ion-content>

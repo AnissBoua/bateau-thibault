@@ -29,14 +29,19 @@ export class SingleCategoriePage implements OnInit {
    }
 
   ngOnInit() {
-    this.categoryId = this.router.getCurrentNavigation()?.extras.state?.['categorie'].id;
-    this.http.get<Product[]>('assets/data/products.json').subscribe(
-      res => {
-        this.produits = res
-        this.produits = this.produits.filter((product)=> product.category === this.categoryId);
-      },
-      err => console.warn(err)
-    );
+    this.route.queryParams.subscribe((params) => {
+      if (this.router.getCurrentNavigation()?.extras.state) {
+        this.categoryId = this.router.getCurrentNavigation()?.extras.state?.['item'];
+        console.log(this.categoryId);
+    
+        this.http.get<Product[]>('assets/data/products.json').subscribe(
+          res => {
+            this.produits = res.filter((product)=> product.category === this.categoryId);
+          },
+          err => console.warn(err)
+        );
+      }
+    });
   }
 
   onLoadPoisson(produit : Product) {
@@ -45,6 +50,6 @@ export class SingleCategoriePage implements OnInit {
         produit : produit
       }
     };
-    this.router.navigate(['tabs/single-poisson'], navigationExtras);
+    this.router.navigate(['/tabs/single-poisson'], navigationExtras);
   }
 }

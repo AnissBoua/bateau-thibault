@@ -88,6 +88,16 @@ const routes: Routes = [
           },
         ],
       },
+      {
+        path: 'panier',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../panier/panier.module').then((m) => m.PanierPageModule),
+          },
+        ],
+      },
     ],
   },
 ];

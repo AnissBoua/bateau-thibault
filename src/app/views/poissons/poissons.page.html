@@ -2,16 +2,15 @@
 
 <ion-content [fullscreen]="true">
 
-  <div class="bg-[#F3FFFF]">
-    <h1 class="ion-text-center padding italic py-2">Poissons</h1>
+  <div class="h-full bg-[#F3FFFF] py-4">
+    <h1 class="text-center font-crimson text-3xl py-2">Poissons</h1>
     <app-list-item
     *ngFor="let categorie of categories"
     [text]="categorie.name"
     [item]="categorie.id"
+    page="single-categorie"
     [img]="'assets/icon/poulpe.png'"
-    (click)="onLoadPoisson(categorie)"
-  ></app-list-item>
-
+    ></app-list-item>
   </div>
 
 </ion-content>

@@ -12,6 +12,9 @@ export class PanierPage implements OnInit {
   constructor(private storage: StorageService) { }
 
   ngOnInit() {
+  }
+
+  ionViewWillEnter() {
     this.storage.get('products').then(product => {
       this.products = product || [];
     });

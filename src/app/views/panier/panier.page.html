@@ -50,6 +50,26 @@
             <span class="font-crimson font-semibold text-lg">Total</span>
             <span class="font-crimson font-semibold text-xl">{{ total().toFixed(2) }} €</span>
           </div>
+          <div class="flex justify-center items-center w-full">
+            <label for="example-select" class="text-sm font-medium text-gray-600 mr-2 w-1/4">Adresse de livraison :</label>
+            <select id="example-select" name="example-select" class="mt-1 block w-full p-2 border border-gray-300 rounded-md bg-white shadow-sm focus:outline-none focus:border-indigo-500">
+              <option value="option1">Sélectionnez</option>
+              <option value="option1">La Poissonnerie Fraîche
+                15 Rue des Marins
+                Portville, 14380
+                France</option>
+              <option value="option2">Le Capitaine Poissonnier
+                28 Quai des Pêcheurs
+                Villemarine, 87990
+                France</option>
+              <option value="option3">Délices de la Mer
+                7 Rue des Poissons
+                Portville-sur-Mer, 02990
+                France</option>
+            </select>
+          </div>
+          
+          
           <div class="flex justify-center w-full">
             <button class="w-full bg-teal-200 hover:bg-teal-500 text-teal-800 font-open font-bold rounded-md py-2 mt-4" (click)="valider()">Payer</button>
           </div>

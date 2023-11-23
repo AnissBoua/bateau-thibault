@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from 'src/app/services/storage.service';
 import { CartItem } from 'src/app/models/cartItem';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-panier',
   templateUrl: './panier.page.html',
@@ -9,7 +10,7 @@ import { CartItem } from 'src/app/models/cartItem';
 export class PanierPage implements OnInit {
 
   products: CartItem[] = [];
-  constructor(private storage: StorageService) { }
+  constructor(private storage: StorageService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -41,5 +42,11 @@ export class PanierPage implements OnInit {
 
   total() {
     return this.products.reduce((acc, product) => acc + product.product.price * product.quantity, 0);
+  }
+
+  valider() {
+    this.storage.set('products', []);
+    this.products = [];
+    this.router.navigate(['/tabs/home']);
   }
 }
